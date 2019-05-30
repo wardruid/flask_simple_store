@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 db_path = os.path.join(os.path.dirname(__file__), 'data.db')
 db_uri = 'sqlite:///{}'.format(db_path)
-app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', db_uri)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 app.secret_key = "tim"
