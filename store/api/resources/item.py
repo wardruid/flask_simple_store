@@ -5,7 +5,7 @@ from flask_jwt_extended import (
     jwt_optional,
     get_jwt_identity,
     fresh_jwt_required)
-from models.item_model import ItemModel
+from store.api.models.item_model import ItemModel
 
 
 def jwt_fresh_token_required():

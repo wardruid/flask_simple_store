@@ -1,4 +1,4 @@
-from db import db
+from store.extensions import db
 
 
 class UserModel(db.Model):

@@ -8,8 +8,8 @@ from flask_jwt_extended import (
 from flask_restful import Resource, reqparse
 from werkzeug.security import safe_str_cmp
 
-from blacklist import BLACKLIST
-from models.user_model import UserModel
+from store.api.blacklist import BLACKLIST
+from store.api.models.user_model import UserModel
 
 _user_parser = reqparse.RequestParser()
 _user_parser.add_argument('username',
