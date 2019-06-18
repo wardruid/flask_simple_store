@@ -2,6 +2,7 @@ from celery import Celery
 from flask import Flask
 from store.config import config
 
+__version__ = '2.0'
 celery = Celery(__name__, broker=config.CELERY_BROKER_URL)
 
 
